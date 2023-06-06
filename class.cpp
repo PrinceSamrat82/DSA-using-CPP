@@ -1,43 +1,44 @@
 #include<iostream>
-#include<string>
 using namespace std;
-class AdmissionForm
+class student
+{
+ char name[10];
+ int age;
+ float mob_no;
+ char addres[20];
+ int pin;
+ public:
+ void Accept()
  {
- 	private :
- 		string name;
- 		string fname;
- 		int age;
-		int dob;
- 		public : void filltheForm()
- 		{
- 			cout<<"Enter your name :";
- 			getline(cin,name);
- 			cout<<"Enter your father's name :";
- 			getline(cin,fname);
- 			cout<<"Enter your age :";
- 		    cin>>age;
+    cout<<"student's name\t";
+    cin>>name;
+    cout<<"student's age\t";
+    cin>>age;
+    cout<<"student's mobile number\t";
+    cin>>mob_no;
+    cout<<"student's address \t";
+    cin>>addres;
+    cout<<"student's pin code\t";
+    cin>>pin;
+   }
+   public:
+   void disply()
+   {
+    cout<<"      =>Student Details<=     "<<endl;
+    cout<<"student's name \t"<<name<<endl;
+    cout<<"student's age \t"<<age<<endl;
+    cout<<"student's mobile number\t"<<mob_no<<endl;
+    cout<<"student's address\t"<<addres<<endl;
+    cout<<"student's pin code\t"<<pin<<endl;
+   }
 
-		 }
- 	     void showInfo()
- 	     {
- 	     	cout<<"Your name is ="<<name<<endl;
- 	     	cout<<"Your father name is ="<<fname<<endl;
- 	     	cout<<"Your age is = "<<age<<endl;
-			  
+};
+int main()
+{
+ student s;
+ s.Accept();
+ s.disply();
 
-		
-		  }
-
-
- };
- int main()
- {
- 	AdmissionForm naveen,prince,pritam;
- 	naveen.filltheForm();
- 	prince.filltheForm();
- 	pritam.filltheForm();
- 	naveen.showInfo();
- 	prince.showInfo();
- 	pritam.showInfo();
 return 0;
- }
+
+}
